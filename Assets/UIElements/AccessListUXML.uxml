@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="UserTableController" style="flex-grow: 1; flex-direction: column;">
+        <engine:VisualElement name="HeaderRow" style="flex-grow: 1; flex-direction: row; height: 30px; max-height: 30px;">
+            <engine:Label text="Name" style="max-width: none; width: 111px; min-width: auto; -unity-text-align: upper-center; height: 30px;" />
+            <engine:Label text="Role" style="max-width: none; width: 111px; min-width: auto; -unity-text-align: upper-center; height: 30px;" />
+            <engine:Label text="Action" style="max-width: none; width: 111px; min-width: auto; -unity-text-align: upper-center; height: 30px;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Jane" style="flex-grow: 1; flex-direction: row; max-height: 30px;">
+            <engine:Label text="Jane Smith" style="width: 111px; -unity-text-align: upper-center;" />
+            <engine:Label text="Admin" style="width: 111px; -unity-text-align: upper-center;" />
+            <engine:Label text="Leave" style="width: 111px; -unity-text-align: upper-center; -unity-font-style: italic;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
