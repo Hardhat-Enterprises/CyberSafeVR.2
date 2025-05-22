@@ -1,0 +1,7 @@
+IMPORTANT NOTE
+Files should not be the same name as it may override someone else’s files (It cannot be Activity1.unity and Activity1.unity).
+If you have custom files, you could rename it to something like passsec_act1_scene1.unity
+The sequence for uploading your files to GitHub is
+1.	Clone main repository
+2.	Pull any changes made by other users to make sure it is the most updated version
+3.	Push any changes you made.
