@@ -3279,6 +3279,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1017718459528971302, guid: fcfe7bb505362824fbff251baa2baee3, type: 3}
   m_PrefabInstance: {fileID: 169893908}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &169893912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2663860993806846472, guid: fcfe7bb505362824fbff251baa2baee3, type: 3}
+  m_PrefabInstance: {fileID: 169893908}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169893909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e030996d04f1f8642a3207145fc1bf38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &172940670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2580629401523843726, guid: 458271fb06e38ef4abfe60d080c61a94, type: 3}
@@ -6990,6 +7001,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1017718459528971302, guid: fcfe7bb505362824fbff251baa2baee3, type: 3}
   m_PrefabInstance: {fileID: 354521487}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &354521491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2663860993806846472, guid: fcfe7bb505362824fbff251baa2baee3, type: 3}
+  m_PrefabInstance: {fileID: 354521487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354521488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e030996d04f1f8642a3207145fc1bf38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &361317977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7329490288198629178, guid: 09786b2145094304f8e76c50e272040f, type: 3}
@@ -14316,8 +14338,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+        - m_Target: {fileID: 354521491}
+          m_TargetAssemblyTypeName: DoorController_SWB01, Assembly-CSharp
           m_MethodName: LockDoor
           m_Mode: 6
           m_Arguments:
@@ -14328,8 +14350,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+        - m_Target: {fileID: 1161213908}
+          m_TargetAssemblyTypeName: DoorController_SWB01, Assembly-CSharp
           m_MethodName: LockDoor
           m_Mode: 6
           m_Arguments:
@@ -14340,8 +14362,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DoorController, Assembly-CSharp
+        - m_Target: {fileID: 169893912}
+          m_TargetAssemblyTypeName: DoorController_SWB01, Assembly-CSharp
           m_MethodName: LockDoor
           m_Mode: 6
           m_Arguments:
@@ -26278,6 +26300,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1017718459528971302, guid: fcfe7bb505362824fbff251baa2baee3, type: 3}
   m_PrefabInstance: {fileID: 1161213904}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1161213908 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2663860993806846472, guid: fcfe7bb505362824fbff251baa2baee3, type: 3}
+  m_PrefabInstance: {fileID: 1161213904}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161213905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e030996d04f1f8642a3207145fc1bf38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1174520712
 GameObject:
   m_ObjectHideFlags: 0
