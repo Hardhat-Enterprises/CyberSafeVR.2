@@ -1,40 +1,43 @@
 using UnityEngine;
 
-public class PaperPinTrigger_SSA01 : MonoBehaviour
+namespace SSA01
 {
-    private void OnTriggerEnter(Collider other)
+    public class PaperPinTrigger : MonoBehaviour
     {
-        if (other.CompareTag("Paper"))
+        private void OnTriggerEnter(Collider other)
         {
-            string userName = GetUserNameFromPaper(other.gameObject);
-
-            AccessListController_SSA1 controller = FindFirstObjectByType<AccessListController_SSA1>();
-
-            if (controller != null)
+            if (other.CompareTag("Paper"))
             {
-                controller.AddUser(userName);
+                string userName = GetUserNameFromPaper(other.gameObject);
+
+                AccessListController controller = FindFirstObjectByType<AccessListController>();
+
+                if (controller != null)
+                {
+                    controller.AddUser(userName);
+                }
             }
         }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Paper"))
+        private void OnTriggerExit(Collider other)
         {
-            string userName = GetUserNameFromPaper(other.gameObject);
-
-            AccessListController_SSA1 controller = FindFirstObjectByType<AccessListController_SSA1>();
-
-            if (controller != null)
+            if (other.CompareTag("Paper"))
             {
-                controller.RemoveUser(userName);
+                string userName = GetUserNameFromPaper(other.gameObject);
+
+                AccessListController controller = FindFirstObjectByType<AccessListController>();
+
+                if (controller != null)
+                {
+                    controller.RemoveUser(userName);
+                }
             }
         }
-    }
 
-    private string GetUserNameFromPaper(GameObject paper)
-    {
-        PaperLabel_SSA01 label = paper.GetComponent<PaperLabel_SSA01>();
-        return label != null ? label.userName : "Unknown";
+        private string GetUserNameFromPaper(GameObject paper)
+        {
+            PaperLabel label = paper.GetComponent<PaperLabel>();
+            return label != null ? label.userName : "Unknown";
+        }
     }
 }

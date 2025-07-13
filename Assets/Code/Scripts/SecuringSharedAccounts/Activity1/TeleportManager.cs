@@ -1,40 +1,43 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 
-public class TeleportManager_SSA01 : MonoBehaviour
+namespace SSA01
 {
-    [Header("References")]
-    [SerializeField] private Transform playerTransform; // Assign this in inspector or find via tag
-    [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider teleportationProvider;
-
-
-    private void Start()
+    public class TeleportManager : MonoBehaviour
     {
-        if (playerTransform == null)
+        [Header("References")]
+        [SerializeField] private Transform playerTransform; // Assign this in inspector or find via tag
+        [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider teleportationProvider;
+
+
+        private void Start()
         {
-            Debug.LogError("No player found. Teleporation won't work.");
+            if (playerTransform == null)
+            {
+                Debug.LogError("No player found. Teleporation won't work.");
+            }
+            if(teleportationProvider == null)
+            {
+                Debug.LogError("No teleporation provider found.");
+            }
+            
         }
-        if(teleportationProvider == null)
+
+
+        public void Teleport(Transform iPosition)
         {
-            Debug.LogError("No teleporation provider found.");
+            if (playerTransform == null || teleportationProvider == null) return;
+
+            // Create the teleportation request to sit down
+            UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportRequest teleportRequest = new UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportRequest
+            {
+                destinationPosition = iPosition.position,
+                destinationRotation = iPosition.rotation
+            };
+
+            // Queue the teleportation request to move the player to the sitting position
+            teleportationProvider.QueueTeleportRequest(teleportRequest);
         }
-        
+
     }
-
-
-    public void Teleport(Transform iPosition)
-    {
-        if (playerTransform == null || teleportationProvider == null) return;
-
-        // Create the teleportation request to sit down
-        UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportRequest teleportRequest = new UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportRequest
-        {
-            destinationPosition = iPosition.position,
-            destinationRotation = iPosition.rotation
-        };
-
-        // Queue the teleportation request to move the player to the sitting position
-        teleportationProvider.QueueTeleportRequest(teleportRequest);
-    }
-
 }
