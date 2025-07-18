@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
+
 namespace Menu
 {
     public class Activity_DropDown : MonoBehaviour
@@ -12,9 +13,10 @@ namespace Menu
         void Start()
         {
             dropdown = GetComponentInParent<TMP_Dropdown>();
-
+            
             if (dropdown != null && dropdown.options.Count > 0)
             {
+                Debug.LogWarning(dropdown.options.Count);
                 HandleInputData(dropdown.value);
             }
             else
