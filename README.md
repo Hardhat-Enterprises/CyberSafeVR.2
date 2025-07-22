@@ -5,11 +5,10 @@
 
 It provides immersive VR training for:
 
-- Phishing Awareness
+- Smishing
 - Password Security
 - Safe Web Browsing
-- Data Encryption
-- Wi-Fi & Network Safety
+
 
 ---
 
