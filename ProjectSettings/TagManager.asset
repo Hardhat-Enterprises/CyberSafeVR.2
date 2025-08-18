@@ -5,10 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
-  - BadSign
-  - GoodSign
   - NotSafe
   - Safe
+  - Floor
+  - Cards
+  - CinemachineTarget
+  - Ground
+  - RedLetter
   layers:
   - Default
   - TransparentFX
