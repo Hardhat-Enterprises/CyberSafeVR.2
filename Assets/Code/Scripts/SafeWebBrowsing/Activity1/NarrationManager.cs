@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+
 namespace SWB01
 {
     public class NarrationManager : MonoBehaviour
@@ -9,13 +10,15 @@ namespace SWB01
         public GameObject narrationCanvas;
         public GameObject narration;
         public TextMeshProUGUI narrationText;
-        public GameObject interactButton;
 
         [Header("Scene Narration Lines")]
         [TextArea(2, 5)]
         public string[] sceneMessages;
-        public AudioClip[] sceneAudioClips; // One audio per message
+        public AudioClip[] sceneAudioClips; // New: One audio per message
         private int currentIndex = 0;
+
+        [Header("NPC Reference")]
+        public GuideNPC guideNPC; // Assign in Inspector
 
         [Header("Audio Clips")]
         public AudioClip textAppearClip; // Optional fallback
@@ -25,6 +28,12 @@ namespace SWB01
         void Start()
         {
             audioSource = GetComponent<AudioSource>();
+
+            if (sceneMessages.Length > 0 && guideNPC != null)
+            {
+                guideNPC.onReachedPlayer.AddListener(OnNPCReachedPlayer);
+                NextMessage(); // Optional: start first message immediately
+            }
         }
 
         public void AddMessage(string newMessage)
@@ -51,16 +60,20 @@ namespace SWB01
 
         public void NextMessage()
         {
-            if (audioSource.isPlaying){
+            guideNPC.GoToPlayer();
+            narration.SetActive(false);
+        }
+
+        private void OnNPCReachedPlayer()
+        {
+            // Stop any current sound
+            if (audioSource.isPlaying)
                 audioSource.Stop();
-            }
+            narration.SetActive(true);
+
             if (currentIndex < sceneMessages.Length)
             {
-                interactButton.SetActive(false);
-                // Show narration UI
-                narration.SetActive(true);
                 narrationText.text = sceneMessages[currentIndex];
-
                 // Play corresponding clip if available
                 if (sceneAudioClips != null && currentIndex < sceneAudioClips.Length && sceneAudioClips[currentIndex] != null)
                 {
@@ -68,6 +81,7 @@ namespace SWB01
                 }
                 else
                 {
+                    // Fallback to textAppearClip if no matching audio
                     PlaySound(textAppearClip);
                 }
 
@@ -75,17 +89,16 @@ namespace SWB01
             }
             else
             {
-                // All messages played, hide narration UI and reset
                 narration.SetActive(false);
-                interactButton.SetActive(true);
                 currentIndex = 0;
-            }
-        }
+                sceneMessages = new string[0];
+                sceneAudioClips = new AudioClip[0];
 
-        public void ClearMessages(){
-            currentIndex = 0;
-            sceneMessages = new string[0];
-            sceneAudioClips = new AudioClip[0];
+                if (guideNPC != null)
+                {
+                    guideNPC.WalkAway();
+                }
+            }
         }
 
         private void PlaySound(AudioClip clip)
