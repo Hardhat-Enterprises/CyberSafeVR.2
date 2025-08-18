@@ -27,7 +27,7 @@ namespace SWB01
 
         public void FinishGame()
         {
-            InvokeEventGroup(endingEvents);
+            
             switch (endingType)
             {
                 case 0:
@@ -37,6 +37,7 @@ namespace SWB01
                     InvokeEventGroup(badEndingEvents);
                     break;
             }
+            InvokeEventGroup(endingEvents);
         }
 
         void InvokeEventGroup(EndingEventGroup group)
