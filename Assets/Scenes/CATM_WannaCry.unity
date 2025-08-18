@@ -4619,7 +4619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 623822515}
-  orbitSpeed: 2
+  orbitSpeed: 8
 --- !u!1 &369303305
 GameObject:
   m_ObjectHideFlags: 0
@@ -7332,7 +7332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 623822515}
-  orbitSpeed: 2
+  orbitSpeed: 8
 --- !u!4 &676978373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4616165200164398447, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
@@ -16960,7 +16960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 623822515}
-  orbitSpeed: 2
+  orbitSpeed: 8
 --- !u!114 &1046317123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20222,7 +20222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 623822515}
-  orbitSpeed: 2
+  orbitSpeed: 8
 --- !u!1001 &1340509737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38256,7 +38256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 623822515}
-  orbitSpeed: 2
+  orbitSpeed: 8
 --- !u!43 &2072760991
 Mesh:
   m_ObjectHideFlags: 0
