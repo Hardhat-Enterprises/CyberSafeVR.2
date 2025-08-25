@@ -28,4 +28,3 @@ public class UIManager : MonoBehaviour
 
     public void HideInfo() { if (infoPanel) infoPanel.SetActive(false); }
 }
-1
