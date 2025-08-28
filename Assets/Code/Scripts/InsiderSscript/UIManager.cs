@@ -13,7 +13,9 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         if (infoPanel != null)
-            infoPanel.SetActive(false); // Hide panel at start
+            // infoPanel.SetActive(false); // Hide panel at start
+            // Example: Show info panel at start with custom text and status
+            ShowInfo("Welcome!", "This is the CyberSafeVR experience. Interact with objects to learn more.", "safe");
     }
 
     /// <summary>
@@ -56,4 +58,5 @@ public class UIManager : MonoBehaviour
         if (infoPanel != null)
             infoPanel.SetActive(false);
     }
+
 }
