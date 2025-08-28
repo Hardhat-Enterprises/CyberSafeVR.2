@@ -1,30 +1,59 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance { get; private set; }
+    [Header("UI References")]
+    public GameObject infoPanel;
+    public TMP_Text titleText;
+    public TMP_Text bodyText;
+    public Image statusIcon;
 
-    [Header("Info Panel")]
-    [SerializeField] GameObject infoPanel;
-    [SerializeField] Text titleText;
-    [SerializeField] Text bodyText;
-    [SerializeField] Image statusDot; // optional: green/ red
-
-    void Awake()
+    void Start()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
-        Instance = this;
+        if (infoPanel != null)
+            infoPanel.SetActive(false); // Hide panel at start
     }
 
-    public void ShowInfo(string title, string message, bool isSuspicious)
+    /// <summary>
+    /// Show info panel with text and status color
+    /// </summary>
+    /// <param name="title">Object title</param>
+    /// <param name="body">Object description</param>
+    /// <param name="status">safe, risky, warning</param>
+    public void ShowInfo(string title, string body, string status)
     {
-        if (!infoPanel) return;
+        if (infoPanel == null || titleText == null || bodyText == null)
+            return;
+
         infoPanel.SetActive(true);
-        if (titleText) titleText.text = title;
-        if (bodyText) bodyText.text = message;
-        if (statusDot) statusDot.color = isSuspicious ? Color.red : Color.green;
+        titleText.text = title;
+        bodyText.text = body;
+
+        if (statusIcon != null)
+        {
+            switch (status.ToLower())
+            {
+                case "safe":
+                    statusIcon.color = Color.green; // #00FF00
+                    break;
+                case "risky":
+                    statusIcon.color = Color.red;   // #FF0000
+                    break;
+                case "warning":
+                    statusIcon.color = Color.yellow; // #FFFF00
+                    break;
+                default:
+                    statusIcon.color = Color.white;
+                    break;
+            }
+        }
     }
 
-    public void HideInfo() { if (infoPanel) infoPanel.SetActive(false); }
+    public void HideInfo()
+    {
+        if (infoPanel != null)
+            infoPanel.SetActive(false);
+    }
 }
