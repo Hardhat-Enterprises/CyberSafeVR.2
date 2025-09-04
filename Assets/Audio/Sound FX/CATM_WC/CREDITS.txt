@@ -1,0 +1,23 @@
+Sound Effects Credits for Activity1
+
+All sound effects used in this project, except for "background.wav", were obtained from https://www.zapsplat.com and are used under the ZapSplat Standard License.
+
+List of sounds:
+- correct_choice.mp3 - "Game sound, ping, correct, right answer, tick" by ZapSplat
+- wrong_choice.mp3 - "Game tone, percussive hit, tap with a negative feel, could be error 5" by ZapSplat
+- clapping.mp3 – "Small audience applauding and cheering, front mics" by ZapSplat, SOUNDEX MACHINA
+- spotlight.mp3 – "Fantasy game sound, loud and bright hard hit" by ZapSplat
+- place_tem.mp3 – "Small solid object set down on hollow wood surface 2" by ZapSplat
+- item_drop.mp3 – "Bed, mattress with sheets and covers on, impact, object or person land on bed 1" by ZapSplat
+- item_pick_up.mp3 – "Aerosol, metal insect spray can, grab, pick up 2" by ZapSplat
+- objects_appear.mp3 – "Magic fairy appear ping, twinkle" by ZapSplat
+- talk.mp3 – "Button, Blip" by ZapSplat, SOUNDEX MACHINA
+- click_button.mp3 – "Futuristic metallic blip, clink UI beep" by ZapSplat
+- walk.mp3 – "Footsteps, boots walking on concrete" by ZapSplat
+- door_close.mp3 – "Door between garage and house close hard" by ZapSplat
+- door_locked.mp3 – "Door between garage and house handle turn 2" by ZapSplat
+- door_open.mp3 – "Door between garage and house open 1" by ZapSplat
+
+These sounds are the property of ZapSplat.com and are used with permission under their free user license.
+
+Thank you to ZapSplat for providing free sound resources!
