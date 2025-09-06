@@ -15,12 +15,14 @@ namespace SWB01
         [TextArea(2, 5)]
         public string[] sceneMessages;
         public AudioClip[] sceneAudioClips; // One audio per message
-        private int currentIndex = 0;
+        public int currentIndex = 0;
 
         [Header("Audio Clips")]
         public AudioClip textAppearClip; // Optional fallback
 
         private AudioSource audioSource;
+
+        public event System.Action OnNarrationComplete;
 
         void Start()
         {
@@ -79,6 +81,8 @@ namespace SWB01
                 narration.SetActive(false);
                 interactButton.SetActive(true);
                 currentIndex = 0;
+
+                OnNarrationComplete?.Invoke();
             }
         }
 
