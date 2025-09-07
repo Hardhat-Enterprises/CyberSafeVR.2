@@ -29,7 +29,7 @@ namespace SWB01
                 if (spotLight != null)
                     spotLight.SetActive(true);
 
-                gameManager.SetEnding(1);
+                gameManager.SetEnding(true);
             }
         }
     }

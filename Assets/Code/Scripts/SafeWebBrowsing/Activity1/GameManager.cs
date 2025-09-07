@@ -7,7 +7,7 @@ namespace SWB01
 {
     public class GameManager: MonoBehaviour
     {
-        public int endingType = 0; // 0 = Good, 1 = Bad
+        public bool endingType = false; // 0 = Good, 1 = Bad
 
         [System.Serializable]
         public class EndingEventGroup
@@ -15,28 +15,27 @@ namespace SWB01
             public List<UnityEvent> events = new List<UnityEvent>();
         }
 
+        public UnityEvent onBadEnding;
+        
         [Header("Ending Event Groups")]
         public EndingEventGroup goodEndingEvents;
         public EndingEventGroup badEndingEvents;
         public EndingEventGroup endingEvents;
 
-        public void SetEnding(int ending)
+        public void SetEnding(bool ending)
         {
             endingType = ending;
         }
 
         public void FinishGame()
         {
-            
-            switch (endingType)
-            {
-                case 0:
-                    InvokeEventGroup(goodEndingEvents);
-                    break;
-                case 1:
-                    InvokeEventGroup(badEndingEvents);
-                    break;
+            if(endingType){
+                InvokeEventGroup(goodEndingEvents);
+            }else{
+                InvokeEventGroup(badEndingEvents);
+                onBadEnding?.Invoke();
             }
+            
             InvokeEventGroup(endingEvents);
         }
 
