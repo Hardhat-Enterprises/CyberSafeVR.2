@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Threading;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,9 +14,16 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         if (infoPanel != null)
+        {
             // infoPanel.SetActive(false); // Hide panel at start
             // Example: Show info panel at start with custom text and status
             ShowInfo("Welcome!", "This is the CyberSafeVR experience. Interact with objects to learn more.", "safe");
+        }
+        Thread.Sleep(5);
+        HideInfo();
+        showInfo("Feel Free to visiting Around!", "Look what you have found", "safe");
+            
+            
     }
 
     /// <summary>
