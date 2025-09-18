@@ -1,7 +1,10 @@
 Sound Effects Credits for Activity1
 
-All sound effects used in this project, except for "background.wav", were obtained from https://www.zapsplat.com and are used under the ZapSplat Standard License.
+ElevenLabs:
+ElevenLabs was used for all AI voicelines. For the guide robot, the AI voice FIN was used.
 
+ZapSlat:
+All sound effects used in this activity, other than NPC voiclines, were obtained from https://www.zapsplat.com and are used under the ZapSplat Standard License.
 List of sounds:
 - clapping.mp3 – "Small audience applauding and cheering, front mics" by ZapSplat, SOUNDEX MACHINA
 - spotlight.mp3 – "Fantasy game sound, loud and bright hard hit" by ZapSplat
