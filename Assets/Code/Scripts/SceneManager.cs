@@ -34,8 +34,7 @@ public class SceneSelectionManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(selectedScene))
         {
-            Debug.LogWarning("No scene selected.");
-            return;
+            selectedScene="SafeWebBrowsing01";
         }
 
         if (sceneLoader != null)
