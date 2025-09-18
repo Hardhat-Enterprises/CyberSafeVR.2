@@ -1,19 +1,22 @@
 using UnityEngine;
 
-namespace SWB01{
+namespace SWB01
+{
     public class RespawnOnFloorHit : MonoBehaviour
     {
         private Vector3 originalPosition;
         private Quaternion originalRotation;
+        private Transform originalParent; // Store the original parent
 
         [Tooltip("Tag of the floor collider that will trigger the respawn")]
         public string floorTag = "Floor";
 
         void Start()
         {
-            // Save the original position and rotation at the start
+            // Save the original position, rotation, and parent at the start
             originalPosition = transform.position;
             originalRotation = transform.rotation;
+            originalParent = transform.parent; // Store the original parent
         }
 
         private void OnTriggerEnter(Collider other)
@@ -24,9 +27,11 @@ namespace SWB01{
             }
         }
 
-
-        private void Respawn()
+        public void Respawn()
         {
+            // Reset parent first to ensure proper positioning
+            transform.SetParent(originalParent);
+            
             // Reset position and rotation
             transform.position = originalPosition;
             transform.rotation = originalRotation;
@@ -41,4 +46,3 @@ namespace SWB01{
         }
     }
 }
-
