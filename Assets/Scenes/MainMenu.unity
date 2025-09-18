@@ -3496,7 +3496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfce3085f2139f5489fe5e5a00ce0291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene_names: []
+  scene_names:
+  - ps01
 --- !u!1 &557912165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4772,7 +4773,10 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options: []
+    m_Options:
+    - m_Text: Password Security
+      m_Image: {fileID: 0}
+      m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CATM_WannaCry.unity
     guid: fd9653aee72f3ec47b3e02f4ef490f8f
+  - enabled: 1
+    path: Assets/Scenes/PasswordSecurity01.unity
+    guid: 4e9fef26e6adb88479ad1b9834a32d94
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 10042b9f00c42374498cae0dfffa81cd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
