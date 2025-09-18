@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
         }
         Thread.Sleep(5);
         HideInfo();
-        ShowInfo("Feel Free to visiting Around!", "Look what you have found", "safe");
+        ShowInfo("Feel Free to Explore Around!", "Look what you have found", "safe");
             
             
     }
