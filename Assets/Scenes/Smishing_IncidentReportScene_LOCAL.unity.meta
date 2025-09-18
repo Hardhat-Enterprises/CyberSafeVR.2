@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 1c9cef71fbfba2a41bcfd02aa5deb089
+=======
+guid: 2fe84e837c7a8b34085442d772479729
+>>>>>>> feature/smishing-tv-dragdrop
 DefaultImporter:
   externalObjects: {}
   userData: 
