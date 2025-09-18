@@ -10107,6 +10107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene_names:
   - SafeWebBrowsing01
+  - SafeWebBrowsing02
 --- !u!1 &1587771646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -11220,6 +11221,9 @@ MonoBehaviour:
   m_Options:
     m_Options:
     - m_Text: Identifying Unsafe Websites
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 1}
+    - m_Text: Safe Download Decision Making
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
