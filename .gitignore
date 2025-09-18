@@ -28,3 +28,6 @@ sysinfo.txt
 
 # Unity cache
 obj/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+/UserSettings/EditorUserSettings.asset
