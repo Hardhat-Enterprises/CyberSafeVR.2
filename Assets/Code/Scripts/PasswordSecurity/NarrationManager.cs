@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using PS01;
 
 public class NarrationManager : MonoBehaviour
 {
