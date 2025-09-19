@@ -1,0 +1,11 @@
+Music
+
+The background music "soft_synth" was obtained from https://www.zapsplat.com and are used under the ZapSplat Standard License.
+
+List of sounds:
+- soft_synth.mp3 - "Game music - soft, warm synth arpeggios, calming, soothing game" by ZapSplat
+
+
+These sounds are the property of ZapSplat.com and are used with permission under their free user license.
+
+Thank you to ZapSplat for providing free sound resources!
