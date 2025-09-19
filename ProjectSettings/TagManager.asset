@@ -12,6 +12,12 @@ TagManager:
   - CinemachineTarget
   - Ground
   - RedLetter
+  - StickyNote
+  - Monitor
+  - BadSign
+  - box1
+  - box2
+  - box3
   layers:
   - Default
   - TransparentFX
@@ -21,10 +27,10 @@ TagManager:
   - UI
   - Wall
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Interactable
+  - box1
+  - box2
+  - box3
   - 
   - 
   - 

@@ -1056,7 +1056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfce3085f2139f5489fe5e5a00ce0291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene_names: []
+  scene_names:
+  - InsiderThreat01
 --- !u!1 &137587889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,7 +1695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8216,7 +8217,10 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options: []
+    m_Options:
+    - m_Text: InsiderThreatA1
+      m_Image: {fileID: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

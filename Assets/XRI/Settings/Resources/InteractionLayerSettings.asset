@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
-  - 
-  - 
-  - 
-  - 
+  - Stickeynote
+  - box1
+  - box2
+  - box3
   - 
   - 
   - 
