@@ -3497,9 +3497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfce3085f2139f5489fe5e5a00ce0291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene_names:
-  - 
-  - PasswordSecurity02
+  scene_names: []
 --- !u!1 &557912165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4775,13 +4773,7 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: A1
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 0}
-    - m_Text: MFA Fatigue and Social Engineering
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 0}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
