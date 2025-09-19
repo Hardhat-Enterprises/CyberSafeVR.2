@@ -2472,7 +2472,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3498,7 +3498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene_names:
-  - 
+  - PasswordSecurity01
   - PasswordSecurity02
 --- !u!1 &557912165
 GameObject:
@@ -4330,7 +4330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.636
       objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4776,7 +4776,7 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: A1
+    - m_Text: Basics of Password Security
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 0}
     - m_Text: MFA Fatigue and Social Engineering
@@ -9565,15 +9565,15 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: Smishing Incident Report
+    - m_Text: Verifying the Source Before Responding
       m_Image: {fileID: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 0}
+      m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 42eb9f53e3b3b884d9ba70855956b068, type: 3}
-        m_TargetAssemblyTypeName: Activity_DropDown, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1909499486}
+        m_TargetAssemblyTypeName: Menu.Activity_DropDown, Assembly-CSharp
+        m_MethodName: HandleInputData
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11514,7 +11514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene_names:
-  - Smishing_IncidentReportScene
+  - Smishing02
 --- !u!1 &1943386682
 GameObject:
   m_ObjectHideFlags: 0
@@ -12062,7 +12062,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3.5}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3860156106623266304}
