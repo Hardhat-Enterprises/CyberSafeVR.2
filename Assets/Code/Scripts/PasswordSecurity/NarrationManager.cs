@@ -2,7 +2,9 @@ using UnityEngine;
 using TMPro;
 using PS01;
 
-public class NarrationManager : MonoBehaviour
+namespace PS01
+{
+    public class NarrationManager : MonoBehaviour
 {
     [Header("UI Elements")]
     public GameObject narrationCanvas;
@@ -52,4 +54,5 @@ public class NarrationManager : MonoBehaviour
         }
         
     }
+}
 }

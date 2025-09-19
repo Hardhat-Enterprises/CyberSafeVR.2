@@ -1,7 +1,9 @@
 using UnityEngine;
 using PS01;
 
-public class CursorManager : MonoBehaviour
+namespace PS01
+{
+    public class CursorManager : MonoBehaviour
 {
     // Function to show the cursor and unlock it
     public void ShowCursor()
@@ -16,4 +18,5 @@ public class CursorManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked; // Lock the cursor at the center
     }
+}
 }

@@ -1,7 +1,9 @@
 using UnityEngine;
 using PS01;
 
-public class SimpleDoorOpener : MonoBehaviour
+namespace PS01
+{
+    public class SimpleDoorOpener : MonoBehaviour
 {
     public Transform door;           // Reference to the door (child object)
     public float openAngle = 90f;    // How far the door opens
@@ -41,4 +43,5 @@ public class SimpleDoorOpener : MonoBehaviour
         // Smoothly rotate the door toward the target
         door.rotation = Quaternion.Slerp(door.rotation, targetRotation, Time.deltaTime * rotateSpeed);
     }
+}
 }
