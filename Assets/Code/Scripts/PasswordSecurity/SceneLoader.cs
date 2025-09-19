@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 #endif
 
-
-public class LoadSceneButton : MonoBehaviour
+namespace PS01
+{
+    public class LoadSceneButton : MonoBehaviour
 {
 
     // Method to call when the button is clicked
@@ -26,4 +27,5 @@ public class LoadSceneButton : MonoBehaviour
             Application.Quit();
         #endif
     }
+}
 }

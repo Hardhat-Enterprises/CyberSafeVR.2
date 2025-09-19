@@ -1,4 +1,5 @@
 using UnityEngine;
+using PS01;
 
 public class SimpleDoorOpener : MonoBehaviour
 {
