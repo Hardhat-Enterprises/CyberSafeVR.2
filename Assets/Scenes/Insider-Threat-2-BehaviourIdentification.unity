@@ -974,6 +974,7 @@ GameObject:
   - component: {fileID: 873858795}
   - component: {fileID: 873858794}
   - component: {fileID: 873858793}
+  - component: {fileID: 873858796}
   m_Layer: 0
   m_Name: PC
   m_TagString: Untagged
@@ -1120,6 +1121,22 @@ MonoBehaviour:
   title: Laptop Login
   body: Using weak passwords makes this system vulnerable.
   status: Risky
+  auditManager: {fileID: 0}
+--- !u!114 &873858796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873858791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19be5292a2184f729a53b5d72d60b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 
+  body: 
+  status: 
   auditManager: {fileID: 0}
 --- !u!1 &925836050
 GameObject:

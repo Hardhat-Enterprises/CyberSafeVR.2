@@ -7516,6 +7516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8297731220183798107}
+  - component: {fileID: 8677493342659480546}
   m_Layer: 0
   m_Name: (Prb)BookOpen
   m_TagString: Untagged
@@ -7523,6 +7524,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
+--- !u!114 &8677493342659480546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8677493342659480545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19be5292a2184f729a53b5d72d60b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: 
+  body: 
+  status: 
+  auditManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
