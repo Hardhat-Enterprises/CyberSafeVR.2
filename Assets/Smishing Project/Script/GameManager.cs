@@ -47,8 +47,8 @@ public class GameManager : MonoBehaviour
     {
         ("CommBank ", "🚨 Urgent! Your bank account is locked. Click here immediately: http://bank-login-fix.com", true),
         ("FREE GIFT ", "Congratulations! You’ve won a free iPhone 🎁. Claim now: http://freeprize.com", true),
-        ("AUSPOST ", "Unusual login detected on your account. Verify now: http://bit.ly/verifyface-bookaccount", false),
-        ("FACEBOOK ", "Unusual login activity detected. Secure account now!", true),
+         ("AUSPOST ", "Unusual login detected on your account. Verify now:https://auspost.com.au/mypost/track/search", false),
+        ("FACEBOOK ", "Unusual login activity detected. Secure account now: http://bit.ly/verifyface-bookaccount", true),
         ("Alinta Energy ", "Reminder: Your bill payment is overdue. Pay immediately to avoid suspension. Click here: https://bit.ly/3XyZAbC", true),
         ("Coles Online ", "Your grocery order #23908 has been shipped. Login here to track: https://www.coles.com.au/order-tracker ", false),
         ("ANZ ", "Your 2FA code is 448291. If you didn’t request this, secure your account here: http://anz-secure.net", true),
@@ -225,11 +225,20 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            titleText.text = (currentScore >= 8) ? "Congratulations you passed" : "You need to get a refresher training";
-            nextLevelButton.gameObject.SetActive(false);
-            retryButton.gameObject.SetActive(true);
-            closeButton.gameObject.SetActive(true);
-            StartCoroutine(LastInstructionDisplay(4f));
+            if (currentScore <= 8)
+            {
+                nextLevelButton.gameObject.SetActive(false);
+                retryButton.gameObject.SetActive(true);
+                closeButton.gameObject.SetActive(true);
+                StartCoroutine(LastInstructionDisplay(0f));
+            }
+            else
+            {
+                titleText.text = "Congratulations you passed";
+                nextLevelButton.gameObject.SetActive(false);
+                retryButton.gameObject.SetActive(true);
+                closeButton.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -255,7 +264,7 @@ public class GameManager : MonoBehaviour
         mesgTwoBtn.gameObject.SetActive(false);
         mesgThreeBtn.gameObject.SetActive(false);
         welcomeText.gameObject.SetActive(true);
-        scoreText.gameObject.SetActive(false);
+        //scoreText.gameObject.SetActive(false);
 
         titleText.text = "Feedback !";
         welcomeText.text = "You are required to complete this smishing training as a part of company cyber awereness compaign.  Please click start to begin !";
