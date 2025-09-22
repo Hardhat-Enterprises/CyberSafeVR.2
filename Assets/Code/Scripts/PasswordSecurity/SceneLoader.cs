@@ -1,0 +1,32 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using PS01;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+namespace PS01
+{
+    public class LoadSceneButton : MonoBehaviour
+{
+
+    // Method to call when the button is clicked
+    public void LoadScene(string sceneName)
+    {
+        // Load the specified scene by its name
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void Quit()
+    {
+        Debug.Log("Quitting Game...");
+
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
+}
+}

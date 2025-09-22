@@ -2,7 +2,7 @@ using Unity.XR.CoreUtils;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController)), RequireComponent(typeof(XROrigin))]
-public class WallPreventer: MonoBehaviour
+public class WallPreventer : MonoBehaviour
 {
     CharacterController m_CharacterController;
     Transform m_LocalHeadTransform;

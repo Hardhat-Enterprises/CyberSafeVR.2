@@ -1174,7 +1174,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -0.5}
-  m_SizeDelta: {x: 2, y: 1}
+  m_SizeDelta: {x: 1.8, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70844836
 MonoBehaviour:
@@ -1264,8 +1264,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1956,7 +1956,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -2957,7 +2957,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -0.5}
-  m_SizeDelta: {x: 2, y: 1}
+  m_SizeDelta: {x: 2, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281882998
 MonoBehaviour:
@@ -3047,8 +3047,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3329,7 +3329,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 5, y: -1}
-  m_SizeDelta: {x: 2, y: 1}
+  m_SizeDelta: {x: 2, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306234467
 MonoBehaviour:
@@ -3400,7 +3400,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -3432,8 +3432,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3918,7 +3918,7 @@ PrefabInstance:
     - target: {fileID: 6966745744865760877, guid: 1439d0f9558649d40a31692d58655cc1, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1793989362}
+      objectReference: {fileID: 0}
     - target: {fileID: 6966745744865760877, guid: 1439d0f9558649d40a31692d58655cc1, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -4897,10 +4897,10 @@ MonoBehaviour:
   nfixedAudioClips:
   - {fileID: 8300000, guid: cfe902d001312ab488116867b9efa692, type: 3}
   fixedMessages:
-  - Well done. Spam filters, updates, and backups protected the company. This is
-    cyber readiness in action.
+  - "Now that your tasks are completed, let\u2019s go back to the future and see
+    what changed."
   fixedAudioClips:
-  - {fileID: 8300000, guid: 2e14e23c613d5d54f90fbb822b67aad3, type: 3}
+  - {fileID: 8300000, guid: a08cc43ca9c2c8946ac44eb01d449e8a, type: 3}
 --- !u!1001 &509629467
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6189,7 +6189,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 0.8}
+  m_SizeDelta: {x: 1.8, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &614515978
 AudioSource:
@@ -6388,8 +6388,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d7348fb3f11ba4f6f933462328963785, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -12781,7 +12781,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -13389,7 +13389,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 0.8}
+  m_SizeDelta: {x: 1.7, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &805197354
 AudioSource:
@@ -13588,8 +13588,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d7348fb3f11ba4f6f933462328963785, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16068,7 +16068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4495713143320702143, guid: cffe7cb1f1e958f4bb79310e7b1d96e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6431139
+      value: 0.635
       objectReference: {fileID: 0}
     - target: {fileID: 4495713143320702143, guid: cffe7cb1f1e958f4bb79310e7b1d96e5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17571,9 +17571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d85fb1efa523104d9abdc6a082901e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1188084729}
-  walkingSound: {fileID: 8300000, guid: f8c685cbc1c6cb84ba9dae29af53b59b, type: 3}
-  walkingSpeedThreshold: 0.01
 --- !u!82 &1188084729
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23795,7 +23792,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -26376,6 +26373,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1771695206}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1700954824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27105,17 +27114,6 @@ MonoBehaviour:
   redLetterPrefab: {fileID: 8868599251207043373, guid: b183c08f42e665347867165077188599, type: 3}
   whiteSpawnInterval: 2
   redSpawnInterval: 3
---- !u!114 &1793989362 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1777598181281417033, guid: 28d54582a65a42443918b8997b7ecfc8, type: 3}
-  m_PrefabInstance: {fileID: 2123163670}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2795d7677f418604f9c686039ef79215, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1797782202
 GameObject:
   m_ObjectHideFlags: 0
@@ -27390,7 +27388,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -28999,7 +28997,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -29086,7 +29084,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -0.5}
-  m_SizeDelta: {x: 2, y: 1}
+  m_SizeDelta: {x: 1.8, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868210718
 MonoBehaviour:
@@ -29176,8 +29174,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -34970,7 +34968,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 2, y: -1}
-  m_SizeDelta: {x: 2, y: 1}
+  m_SizeDelta: {x: 2, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936344808
 MonoBehaviour:
@@ -35041,7 +35039,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
@@ -35073,8 +35071,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -35160,7 +35158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 0.8}
+  m_SizeDelta: {x: 1.8, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962452233
 MonoBehaviour:
@@ -35262,8 +35260,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d7348fb3f11ba4f6f933462328963785, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -35621,18 +35619,6 @@ MonoBehaviour:
   onPaperDestroyed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1771695206}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1595384783}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -36500,7 +36486,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1793989362}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -38053,7 +38039,7 @@ MonoBehaviour:
   cond: 0
   nfixedMessages:
   - "Phishing emails often spread ransomware. Spot a fake invoice and bin it. Then
-    enable spam filters.\r"
+    enable spam filters on the computer.\r"
   nfixedAudioClips:
   - {fileID: 8300000, guid: 55acc4d686ac28f47986430210d2147a, type: 3}
   fixedMessages:
@@ -38388,7 +38374,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 0.8}
+  m_SizeDelta: {x: 1.8, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &2101796458
 AudioSource:
@@ -38587,8 +38573,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d7348fb3f11ba4f6f933462328963785, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -38791,6 +38777,10 @@ PrefabInstance:
       propertyPath: playerLocomotion
       value: 
       objectReference: {fileID: 1400305431}
+    - target: {fileID: 2985436251649352913, guid: 28d54582a65a42443918b8997b7ecfc8, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 623822515}
     - target: {fileID: 3860156105555333450, guid: 28d54582a65a42443918b8997b7ecfc8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -39156,8 +39146,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 7482667652216324306, guid: 89c4a04573d948841b609cd9fb704926, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -39294,7 +39284,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -0.5}
-  m_SizeDelta: {x: 2, y: 1}
+  m_SizeDelta: {x: 1.8, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4309446784334047423
 Canvas:

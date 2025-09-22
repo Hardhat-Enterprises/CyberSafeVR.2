@@ -60,7 +60,7 @@ namespace SWB01
         public void IncrementTotal(int amount = 1)
         {
             totalCount += amount;
-            if(totalCount == 6){
+            if(totalCount >= 6){
                 askEndGame?.Invoke();
             }
         }

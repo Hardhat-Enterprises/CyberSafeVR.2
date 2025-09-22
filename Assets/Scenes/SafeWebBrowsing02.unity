@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2985436251649352913, guid: 28d54582a65a42443918b8997b7ecfc8, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 623822515}
     - target: {fileID: 3860156105555333450, guid: 28d54582a65a42443918b8997b7ecfc8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
