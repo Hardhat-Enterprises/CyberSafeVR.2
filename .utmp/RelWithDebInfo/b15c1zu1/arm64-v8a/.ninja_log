@@ -1,0 +1,23 @@
+# ninja log v5
+1505	3842	7783961216220484	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6c591243581fb0c1
+1101	3839	7783961217627555	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	148382cc4be13208
+3433	4057	7783961223176044	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	202286e48c5b991b
+4058	4908	7783961231619334	D:/PLAYSTATION/UNITY PROJECTS/Cybersafe_VR/CyberSafeVR.2-main/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/b15c1zu1/obj/arm64-v8a/libswappywrapper.so	b6866dc8da9e978
+662	3836	7783961206358109	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	afeba52047603687
+2675	4631	7783961228892828	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a4c4774cf2d403ea
+27	3832	7783961202252523	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	42413b77bf0f196e
+1890	4316	7783961225616744	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	7bed5afd4ea93adf
+2280	4330	7783961225851584	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	69b5e9079ed38e19
+3055	4992	7783961232427927	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	dabca00523080fa
+4993	5972	7783961242317153	D:/PLAYSTATION/UNITY PROJECTS/Cybersafe_VR/CyberSafeVR.2-main/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/b15c1zu1/obj/arm64-v8a/libgame.so	c97774efc06bacfc
+32	6805	7789947066577232	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	afeba52047603687
+829	6810	7789947067625756	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6c591243581fb0c1
+1494	6812	7789947074558489	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	148382cc4be13208
+1986	6815	7789947077670471	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	42413b77bf0f196e
+2702	6817	7789947088396506	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	7bed5afd4ea93adf
+3539	6819	7789947094275844	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	69b5e9079ed38e19
+4370	6822	7789947102482044	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a4c4774cf2d403ea
+6007	6921	7789947110974347	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	202286e48c5b991b
+5181	6935	7789947111040829	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	dabca00523080fa
+6921	8379	7789947125536161	D:/PLAYSTATION/UNITY PROJECTS/Cybersafe_VR/CyberSafeVR.2-main/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/b15c1zu1/obj/arm64-v8a/libswappywrapper.so	b6866dc8da9e978
+6935	8403	7789947125658926	D:/PLAYSTATION/UNITY PROJECTS/Cybersafe_VR/CyberSafeVR.2-main/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/b15c1zu1/obj/arm64-v8a/libgame.so	c97774efc06bacfc
