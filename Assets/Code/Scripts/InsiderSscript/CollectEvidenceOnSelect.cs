@@ -1,12 +1,19 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class CollectEvidenceOnSelect : MonoBehaviour
+namespace InsiderThreat02
 {
-    [SerializeField] EvidenceItem evidence;
+    /// <summary>
+    /// Collects evidence when the object is selected in a VR environment.
+    /// </summary>
 
-    public void OnSelected(SelectEnterEventArgs _)
+    public class CollectEvidenceOnSelect : MonoBehaviour
     {
-        if (evidence) EvidenceManager.Instance?.Collect(evidence);
+        [SerializeField] EvidenceItem evidence;
+
+        public void OnSelected(SelectEnterEventArgs _)
+        {
+            if (evidence) EvidenceManager.Instance?.Collect(evidence);
+        }
     }
 }

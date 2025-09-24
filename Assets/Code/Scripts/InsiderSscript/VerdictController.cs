@@ -1,20 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VerdictController : MonoBehaviour
+namespace InsiderThreat02
 {
-    [SerializeField] Text resultText;
-    [SerializeField] int suspiciousThreshold = 2;
+    /// <summary>
+    /// Handles the player's verdict choice and displays the result based on collected evidence.
+    /// </summary>
 
-    public void ChooseInnocent()
+    public class VerdictController : MonoBehaviour
     {
-        var susp = EvidenceManager.Instance?.SuspiciousCount() ?? 0;
-        if (resultText) resultText.text = susp == 0 ? "Innocent ✅" : "Inconclusive — review evidence.";
-    }
+        [SerializeField] Text resultText;
+        [SerializeField] int suspiciousThreshold = 2;
 
-    public void ChooseGuilty()
-    {
-        var susp = EvidenceManager.Instance?.SuspiciousCount() ?? 0;
-        if (resultText) resultText.text = susp >= suspiciousThreshold ? "Guilty ✅" : "Inconclusive — more evidence needed.";
+        public void ChooseInnocent()
+        {
+            var susp = EvidenceManager.Instance?.SuspiciousCount() ?? 0;
+            if (resultText) resultText.text = susp == 0 ? "Innocent ✅" : "Inconclusive — review evidence.";
+        }
+
+        public void ChooseGuilty()
+        {
+            var susp = EvidenceManager.Instance?.SuspiciousCount() ?? 0;
+            if (resultText) resultText.text = susp >= suspiciousThreshold ? "Guilty ✅" : "Inconclusive — more evidence needed.";
+        }
     }
 }

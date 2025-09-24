@@ -1,12 +1,19 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ToggleCanvasOnSelect : MonoBehaviour
+namespace InsiderThreat02
 {
-    [SerializeField] GameObject targetCanvas;
+    /// <summary>
+    /// Toggles a specified canvas on or off when the object is selected.
+    /// </summary>
 
-    public void OnSelected(SelectEnterEventArgs _)
+    public class ToggleCanvasOnSelect : MonoBehaviour
     {
-        if (targetCanvas) targetCanvas.SetActive(!targetCanvas.activeSelf);
+        [SerializeField] GameObject targetCanvas;
+
+        public void OnSelected(SelectEnterEventArgs _)
+        {
+            if (targetCanvas) targetCanvas.SetActive(!targetCanvas.activeSelf);
+        }
     }
 }

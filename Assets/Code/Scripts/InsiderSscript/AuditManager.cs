@@ -1,33 +1,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AuditManager : MonoBehaviour
+namespace InsiderThreat02
 {
-    public List<Interactable> allObjects = new List<Interactable>(); // All objects in scene
-    private int inspectedCount = 0;
+    /// <summary>
+    /// Manages the audit process, tracking inspected objects and calculating scores.
+    /// </summary>
 
-    private UIManager uiManager;
-
-    public void ObjectInspected(Interactable obj)
+    public class AuditManager : MonoBehaviour
     {
-        if (!allObjects.Contains(obj))
+        public List<Interactable> allObjects = new List<Interactable>(); // All objects in scene
+        private int inspectedCount = 0;
+
+        private UIManager uiManager;
+
+        public void ObjectInspected(Interactable obj)
         {
-            allObjects.Add(obj);
-            inspectedCount++;
-            Debug.Log("Inspected: " + obj.title);
+            if (!allObjects.Contains(obj))
+            {
+                allObjects.Add(obj);
+                inspectedCount++;
+                Debug.Log("Inspected: " + obj.title);
+            }
+        }
+
+        public void ShowAuditScore()
+        {
+            int totalObjects = allObjects.Count;
+            string message = $"You inspected {inspectedCount} out of {totalObjects} objects.";
+
+            Debug.Log(message);
+
+            if (uiManager != null)
+            {
+                uiManager.ShowInfo("Audit Complete", message, "safe");
+            }
         }
     }
-
-    public void ShowAuditScore()
-    {
-        int totalObjects = allObjects.Count;
-        string message = $"You inspected {inspectedCount} out of {totalObjects} objects.";
-
-        Debug.Log(message);
-
-        if (uiManager != null)
-        {
-            uiManager.ShowInfo("Audit Complete", message, "safe");
-        }
-    }
-}
+}   

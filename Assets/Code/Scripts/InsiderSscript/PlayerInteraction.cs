@@ -1,24 +1,31 @@
 using UnityEngine;
 
-public class PlayerInteraction : MonoBehaviour
+namespace InsiderThreat02
 {
-    public float interactDistance = 3f; // how far the player can interact
-    public LayerMask interactableLayer; // assign in Inspector (e.g., "Interactable")
+    /// <summary>
+    /// Handles player interactions with objects in a VR environment.
+    /// </summary>
 
-    void Update()
+    public class PlayerInteraction : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.E)) // press E to interact (or replace with VR button)
-        {
-            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-            RaycastHit hit;
+        public float interactDistance = 3f; // how far the player can interact
+        public LayerMask interactableLayer; // assign in Inspector (e.g., "Interactable")
 
-            if (Physics.Raycast(ray, out hit, interactDistance, interactableLayer))
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E)) // press E to interact (or replace with VR button)
             {
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
-                if (interactable != null)
+                Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, interactDistance, interactableLayer))
                 {
-                    Debug.Log("Interacting with: " + hit.collider.name);
-                    interactable.OnSelect();
+                    Interactable interactable = hit.collider.GetComponent<Interactable>();
+                    if (interactable != null)
+                    {
+                        Debug.Log("Interacting with: " + hit.collider.name);
+                        interactable.OnSelect();
+                    }
                 }
             }
         }
