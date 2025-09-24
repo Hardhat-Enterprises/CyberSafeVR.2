@@ -469,13 +469,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706387039}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6930ab363a38040d094492a0a1fe6fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 40
-  groundDrag: 8
+  groundDrag: 0
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
@@ -1426,8 +1426,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2686,6 +2686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1975528358}
+  - component: {fileID: 1975528359}
   m_Layer: 0
   m_Name: CameraPos
   m_TagString: MainCamera
@@ -2708,6 +2709,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 706387043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1975528359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975528357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96888cfc0803403e8fb667de11a56e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistance: 3
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1985227053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,7 +3486,7 @@ GameObject:
   - component: {fileID: 4940672432526391328}
   - component: {fileID: 5211601002748646012}
   - component: {fileID: 5237742569174960847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desk2_drawer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3608,7 +3625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6410184557071346476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desk2_drawers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3935,7 +3952,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4642223631280711053}
-  m_Layer: 0
+  - component: {fileID: 4642223631280711054}
+  - component: {fileID: 4642223631280711055}
+  m_Layer: 8
   m_Name: desk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4070,6 +4089,45 @@ Transform:
   - {fileID: 6410184557071346476}
   m_Father: {fileID: 3679062403282655605}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4642223631280711054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667091898087377119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f19be5292a2184f729a53b5d72d60b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Look like you have found somethings!
+  body: "Leaving a drawer open on your desk is unprofessional. It allows people to
+    steal sensitive information that should be locked to prevent theft. This could
+    also lead to insider threats and breach the company\u2019s cybersecurity policy."
+  status: warning
+  auditManager: {fileID: 0}
+--- !u!65 &4642223631280711055
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667091898087377119}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &4652528638371992794
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4090,7 +4148,7 @@ GameObject:
   - component: {fileID: 218755044375213162}
   - component: {fileID: 8388822663585674215}
   - component: {fileID: 6462393820185796742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desk2_base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4304,7 +4362,7 @@ GameObject:
   - component: {fileID: 5041030227577548560}
   - component: {fileID: 354998455883691191}
   - component: {fileID: 4798155411773732265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desk2_drawer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4508,7 +4566,7 @@ GameObject:
   - component: {fileID: 4770851845030620717}
   - component: {fileID: 3346484608960004251}
   - component: {fileID: 3387964214427103981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: desk2_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
