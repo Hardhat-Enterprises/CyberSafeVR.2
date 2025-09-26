@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class EmailCardTag : MonoBehaviour
+namespace Smishing03
 {
-    // Tick this in the Inspector for phishing cards; leave off for safe cards.
-    public bool isPhishing;
+    public class EmailCardTag : MonoBehaviour
+    {
+        // Tick this in the Inspector for phishing cards; leave off for safe cards.
+        public bool isPhishing;
+    }
 }
