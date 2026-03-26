@@ -16,16 +16,17 @@
       }
     },
     "com.unity.ads": {
-      "version": "4.4.2",
+      "version": "4.17.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.ugui": "1.0.0"
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.androidjni": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.ai.navigation": {
-      "version": "2.0.6",
+      "version": "2.0.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -34,7 +35,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.analytics": {
-      "version": "3.8.1",
+      "version": "3.8.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -111,9 +112,9 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.xr.interaction.toolkit": "3.0.8",
-        "com.unity.xr.oculus": "4.5.2",
-        "com.unity.xr.openxr": "1.14.0"
+        "com.unity.xr.interaction.toolkit": "3.0.10",
+        "com.unity.xr.oculus": "4.5.4",
+        "com.unity.xr.openxr": "1.14.3"
       }
     },
     "com.unity.ide.rider": {
@@ -365,8 +366,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
-      "version": "3.0.8",
-      "depth": 0,
+      "version": "3.0.10",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
@@ -404,17 +405,18 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.5.2",
-      "depth": 0,
+      "version": "4.5.4",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.management": "4.4.0"
+        "com.unity.xr.management": "4.4.0",
+        "com.unity.modules.androidjni": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.14.0",
-      "depth": 0,
+      "version": "1.14.3",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.inputsystem": "1.6.3",
