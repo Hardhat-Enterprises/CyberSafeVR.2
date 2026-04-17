@@ -122,3 +122,15 @@ Window → XR → XR Interaction Debugger → Device Simulator
 ## 📄 License
 
 This project is for **educational use only** as part of Deakin University's Capstone Program.
+
+---
+
+## 👤 Team Contributions
+
+### Nazia Naderi – Key Achievements
+
+- Reviewed the CyberSafe VR GitHub repository to understand project structure, including assets, scripts, and scenes.
+- Used the Trello board to monitor sprint progress and track tasks across different stages.
+- Participated in team discussions and clarified understanding of project tasks and workflow.
+- Reviewed project documentation to understand VR training modules and user experience design.
+- Stayed engaged with team updates and contributed to overall project understanding.
