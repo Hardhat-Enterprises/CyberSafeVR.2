@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1441535460d56494f85894dde14cbbd5, type: 3}
+  m_Name: Scenario_01_BankImpersonation
+  m_EditorClassIdentifier: 
+  scenarioTitle: Bank Account Alert
+  introNarration: A text just came in. Your phone buzzes. Read it carefully.
+  senderName: +61 456 789 012
+  messageBody: 'URGENT: Your ANZ account has been compromised. Click the link IMMEDIATELY
+    to secure your account or it will be suspended in 1 hour.'
+  embeddedUrl: http://secure-anz-banking.ru/verify
+  correctAction: 0
+  isLegitimate: 0
+  correctFeedback: Excellent! The .ru domain and urgency language were clear red
+    flags. ANZ would never contact you this way.
+  incorrectFeedback: This was a smishing attempt. The URL uses a foreign .ru domain
+    impersonating ANZ. Legitimate banks never ask you to verify accounts via SMS
+    links.
+  redFlags:
+  - Urgency language (URGENT, IMMEDIATELY, 1 hour)
+  - Suspicious foreign domain (.ru, not .com.au)
+  - Threat of account suspension
+  - Generic sender number (not a verified short-code)
+  difficultyLevel: 1
