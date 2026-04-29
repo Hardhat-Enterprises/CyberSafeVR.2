@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1441535460d56494f85894dde14cbbd5, type: 3}
+  m_Name: Scenario_04_TelstraAccount
+  m_EditorClassIdentifier: 
+  scenarioTitle: Telstra Account Suspended
+  introNarration: Your phone provider appears to be contacting you.
+  senderName: TelstraAU
+  messageBody: 'Your Telstra bill payment failed. Account will be suspended in 2
+    hours. Update payment details here: bit.ly/tls-pay-9823'
+  embeddedUrl: bit.ly/tls-pay-9823
+  correctAction: 0
+  isLegitimate: 0
+  correctFeedback: Well done! Shortened URLs like bit.ly hide the real destination.
+    Legitimate companies use their own domains.
+  incorrectFeedback: 'Always suspicious: shortened URLs (bit.ly) hide where they
+    lead. Telstra would use telstra.com.au. Never click shortened links from unknown
+    senders.'
+  redFlags:
+  - Shortened URL (bit.ly hides the real domain)
+  - Urgency (2 hours)
+  - Threat of service suspension
+  - Requests payment details via link
+  difficultyLevel: 1

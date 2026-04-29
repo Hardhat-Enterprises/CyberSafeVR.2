@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1441535460d56494f85894dde14cbbd5, type: 3}
+  m_Name: Scenario_03_ATOTaxRefund
+  m_EditorClassIdentifier: 
+  scenarioTitle: ATO Tax Refund
+  introNarration: A message claiming to be from the ATO. It says you're owed money.
+  senderName: ATO-myGov
+  messageBody: Good news! You are entitled to a tax refund of $1,247.50. Click here
+    to claim your refund now. Offer expires in 24 hours.
+  embeddedUrl: https://mygov-refund.info/claim?id=8842
+  correctAction: 0
+  isLegitimate: 0
+  correctFeedback: Correct! The ATO never sends refund links via SMS. The .info domain
+    is also a giveaway.
+  incorrectFeedback: This was a smishing attempt. The ATO NEVER sends refund links
+    via SMS or email. Real refunds are processed automatically into the bank account
+    you provided.
+  redFlags:
+  - ATO never sends refund links via SMS
+  - Suspicious .info domain (not .gov.au)
+  - Artificial deadline (24 hours)
+  - Unexpected refund amount
+  difficultyLevel: 2

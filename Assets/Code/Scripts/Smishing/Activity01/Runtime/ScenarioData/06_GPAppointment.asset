@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1441535460d56494f85894dde14cbbd5, type: 3}
+  m_Name: 06_GPAppointment
+  m_EditorClassIdentifier: 
+  scenarioTitle: Appointment Reminder
+  category: 5
+  senderName: MyMedicare
+  messageBody: 'Reminder: You have a GP appointment tomorrow at 10:00 AM at Deakin
+    Health Clinic, Waurn Ponds. Call 5227 8500 to reschedule. Do not reply to this
+    SMS.'
+  embeddedUrl: 
+  introNarration: You booked a GP appointment yesterday. Decide whether to act on
+    this reminder or flag it.
+  correctAction: 1
+  correctFeedback: Well done! This message is LEGITIMATE. No link, local phone number,
+    and it references an appointment you actually made. Recognising safe messages
+    matters too.
+  incorrectFeedback: "This message was actually legitimate \u2014 no link, a verifiable
+    local number, and it refers to an appointment you made. Healthy caution is good,
+    but over-reporting wastes effort."
+  redFlags:
+  - "(No red flags \u2014 this is a legitimate message)"
+  hintText: Are there actually any links or payment requests in this message?
+  suspiciousSubstring: 
+  difficultyLevel: 3
