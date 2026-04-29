@@ -9,8 +9,7 @@ namespace Smishing01
 {
     /// <summary>
     /// Shows correct / incorrect feedback panels.
-    /// The player presses a "Continue" button to advance instead of
-    /// auto-closing, which gives them time to read the explanation.
+    /// The player presses a "Continue" button to advance.
     /// </summary>
     public class ScenarioOutcomeHandler : MonoBehaviour
     {
@@ -32,9 +31,7 @@ namespace Smishing01
         [Header("End Scene")]
         [SerializeField] private string debriefSceneName = "Smishing01_End";
 
-        private Action _onContinue;
-
-        // ── API ──────────────────────────────────────────────────────────────
+        private bool _continueClicked;
 
         public Coroutine ShowOutcomeAndWait(bool correct, SmishingScenarioData data, Action onComplete)
         {
@@ -43,26 +40,34 @@ namespace Smishing01
 
         public void LoadDebrief() => SceneManager.LoadScene(debriefSceneName);
 
-        // ── Unity lifecycle ───────────────────────────────────────────────────
-
         private void Awake()
         {
             HideAll();
-            correctContinueButton  ?.onClick.AddListener(() => { HideAll(); _onContinue?.Invoke(); });
-            incorrectContinueButton?.onClick.AddListener(() => { HideAll(); _onContinue?.Invoke(); });
+            if (correctContinueButton != null)
+            {
+                correctContinueButton.onClick.RemoveAllListeners();
+                correctContinueButton.onClick.AddListener(OnContinueClicked);
+            }
+            if (incorrectContinueButton != null)
+            {
+                incorrectContinueButton.onClick.RemoveAllListeners();
+                incorrectContinueButton.onClick.AddListener(OnContinueClicked);
+            }
         }
 
-        // ── Private ───────────────────────────────────────────────────────────
+        private void OnContinueClicked() => _continueClicked = true;
 
         private IEnumerator OutcomeRoutine(bool correct, SmishingScenarioData data, Action onComplete)
         {
-            bool clicked = false;
-            _onContinue = () => clicked = true;
+            _continueClicked = false;
 
             if (correct) ShowCorrect(data);
             else         ShowIncorrect(data);
 
-            yield return new WaitUntil(() => clicked);
+            yield return new WaitUntil(() => _continueClicked);
+
+            HideAll();
+            yield return new WaitForSeconds(0.15f);
             onComplete?.Invoke();
         }
 
@@ -70,13 +75,14 @@ namespace Smishing01
         {
             HideAll();
             if (correctFeedbackText != null) correctFeedbackText.text = data.correctFeedback;
-            correctPanel?.SetActive(true);
+            if (correctPanel != null) correctPanel.SetActive(true);
             if (correctGroup != null)
             {
                 correctGroup.alpha = 0f;
                 StartCoroutine(UITween.FadeCanvasGroup(correctGroup, 0f, 1f, 0.3f));
             }
-            StartCoroutine(UITween.ScalePop(correctPanel.transform, 0.85f, 1f, 0.35f));
+            if (correctPanel != null)
+                StartCoroutine(UITween.ScalePop(correctPanel.transform, 0.85f, 1f, 0.35f));
         }
 
         private void ShowIncorrect(SmishingScenarioData data)
@@ -88,19 +94,20 @@ namespace Smishing01
             else if (redFlagsText != null)
                 redFlagsText.text = "";
 
-            incorrectPanel?.SetActive(true);
+            if (incorrectPanel != null) incorrectPanel.SetActive(true);
             if (incorrectGroup != null)
             {
                 incorrectGroup.alpha = 0f;
                 StartCoroutine(UITween.FadeCanvasGroup(incorrectGroup, 0f, 1f, 0.3f));
             }
-            StartCoroutine(UITween.ScalePop(incorrectPanel.transform, 0.85f, 1f, 0.35f));
+            if (incorrectPanel != null)
+                StartCoroutine(UITween.ScalePop(incorrectPanel.transform, 0.85f, 1f, 0.35f));
         }
 
         private void HideAll()
         {
-            correctPanel  ?.SetActive(false);
-            incorrectPanel?.SetActive(false);
+            if (correctPanel   != null) correctPanel.SetActive(false);
+            if (incorrectPanel != null) incorrectPanel.SetActive(false);
         }
     }
 }

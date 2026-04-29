@@ -8,16 +8,9 @@ namespace Smishing01
 {
     /// <summary>
     /// World-space phone screen controller.
-    /// Features:
-    ///  • Animated appearance (scale + fade in)
-    ///  • Hint button that reveals scenario-specific hint text
-    ///  • Confirm dialog before the dangerous "Click Link" action
-    ///  • Highlight-on-reveal: after the player answers, the suspicious
-    ///    substring in the message or URL is recoloured red with an underline.
     /// </summary>
     public class PhoneMessageUI : MonoBehaviour
     {
-        // ── Text fields ──────────────────────────────────────────────────────
         [Header("Text Fields")]
         public TMP_Text senderNameText;
         public TMP_Text messageBodyText;
@@ -25,23 +18,19 @@ namespace Smishing01
         public TMP_Text timeStampText;
         public TMP_Text hintText;
 
-        // ── Buttons ──────────────────────────────────────────────────────────
         [Header("Action Buttons")]
         public Button reportButton;
         public Button ignoreButton;
         public Button clickLinkButton;
         public Button hintButton;
 
-        // ── Containers / animation ───────────────────────────────────────────
         [Header("Containers")]
         public CanvasGroup canvasGroup;
         public Transform  phoneBody;
 
-        // ── Confirm dialog ────────────────────────────────────────────────────
         [Header("Confirm Dialog")]
         public ConfirmDialogController confirmDialog;
 
-        // ── Events / state ────────────────────────────────────────────────────
         public event Action<PlayerAction> OnPlayerAction;
 
         private SmishingScenarioData _current;
@@ -49,10 +38,10 @@ namespace Smishing01
         private string _urlOriginal;
         private bool   _hintUsed;
 
-        /// <summary>True if the player used their hint token this scenario.</summary>
         public bool WasHintUsed => _hintUsed;
 
         // ── Public API ────────────────────────────────────────────────────────
+
         public void DisplayScenario(SmishingScenarioData data)
         {
             _current      = data;
@@ -85,13 +74,19 @@ namespace Smishing01
             StartCoroutine(AnimateAppear());
         }
 
+        /// <summary>Immediate hide — no animation race. Used between scenarios.</summary>
         public void Hide()
         {
             StopAllCoroutines();
-            StartCoroutine(AnimateHide());
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha          = 0f;
+                canvasGroup.interactable   = false;
+                canvasGroup.blocksRaycasts = false;
+            }
+            gameObject.SetActive(false);
         }
 
-        /// <summary>Highlights the suspicious substring in red + underline.</summary>
         public void RevealRedFlags()
         {
             if (_current == null || string.IsNullOrEmpty(_current.suspiciousSubstring))
@@ -111,10 +106,27 @@ namespace Smishing01
 
         private void Awake()
         {
-            reportButton    ?.onClick.AddListener(() => Respond(PlayerAction.ReportMessage));
-            ignoreButton    ?.onClick.AddListener(() => Respond(PlayerAction.IgnoreMessage));
-            clickLinkButton ?.onClick.AddListener(OnClickLinkPressed);
-            hintButton      ?.onClick.AddListener(OnHintPressed);
+            // Wire buttons ONCE — these listeners persist across scenarios
+            if (reportButton != null)
+            {
+                reportButton.onClick.RemoveAllListeners();
+                reportButton.onClick.AddListener(() => Respond(PlayerAction.ReportMessage));
+            }
+            if (ignoreButton != null)
+            {
+                ignoreButton.onClick.RemoveAllListeners();
+                ignoreButton.onClick.AddListener(() => Respond(PlayerAction.IgnoreMessage));
+            }
+            if (clickLinkButton != null)
+            {
+                clickLinkButton.onClick.RemoveAllListeners();
+                clickLinkButton.onClick.AddListener(OnClickLinkPressed);
+            }
+            if (hintButton != null)
+            {
+                hintButton.onClick.RemoveAllListeners();
+                hintButton.onClick.AddListener(OnHintPressed);
+            }
 
             if (canvasGroup == null) canvasGroup = GetComponent<CanvasGroup>();
 
@@ -151,13 +163,10 @@ namespace Smishing01
         private void OnHintPressed()
         {
             if (_hintUsed || _current == null || hintText == null) return;
-
             _hintUsed = true;
-            hintButton.interactable = false;
+            if (hintButton != null) hintButton.interactable = false;
             hintText.text = "💡  " + _current.hintText;
             hintText.gameObject.SetActive(true);
-
-            // Flash the hint for emphasis
             StartCoroutine(UITween.ScalePop(hintText.transform, 0.5f, 1f, 0.3f));
         }
 
@@ -175,8 +184,6 @@ namespace Smishing01
             if (clickLinkButton != null) clickLinkButton.interactable = value;
         }
 
-        // ── Animations ────────────────────────────────────────────────────────
-
         private IEnumerator AnimateAppear()
         {
             if (canvasGroup != null)
@@ -190,17 +197,6 @@ namespace Smishing01
             Coroutine popC  = StartCoroutine(UITween.ScalePop(target, 0.7f, 1f, 0.45f));
             yield return fadeC;
             yield return popC;
-        }
-
-        private IEnumerator AnimateHide()
-        {
-            if (canvasGroup != null)
-            {
-                yield return UITween.FadeCanvasGroup(canvasGroup, canvasGroup.alpha, 0f, 0.2f);
-                canvasGroup.interactable   = false;
-                canvasGroup.blocksRaycasts = false;
-            }
-            gameObject.SetActive(false);
         }
     }
 }
