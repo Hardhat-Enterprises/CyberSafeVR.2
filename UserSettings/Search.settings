@@ -9,7 +9,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"picker_window_position_offset.075BCD15" = "-301.3334;284;320;550"
+	"picker_window_position_offset.075BCD15" = "99.19995;348.8;320;550.4"
 	"picker_visibility_flags.075BCD15" = "264"
 	"picker_item_size.075BCD15" = "96"
 	"picker_inspector.075BCD15" = "0"
@@ -69,19 +69,11 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
-	"activate"
-	"activate val"
-	"tri"
-	"primar"
-	"activate value"
-	"activate v"
-	"triggerp"
-	""
-	"left tri"
-	"triggerpress"
-	"xri right"
+	"xri right intera"
+	"xri right "
 ]
 searchItemFavorites = [
+	"52798"
 ]
 savedSearchesSortOrder = 0
 showSavedSearchPanel = false

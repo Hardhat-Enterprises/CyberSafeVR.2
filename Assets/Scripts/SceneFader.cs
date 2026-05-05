@@ -2,20 +2,25 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class SceneFader : MonoBehaviour
 {
     [Header("Fader Settings")]
-    public Image fadeImage;          // The black overlay image
-    public float fadeDuration = 1f;  // How long the fade takes
+    public Image fadeImage;
+    public float fadeDuration = 1f;
+
+    [Header("Loading Text")]
+    public TextMeshProUGUI loadingText;
 
     private void Start()
     {
-        // Fade in when the scene loads
+        if (loadingText != null)
+            loadingText.gameObject.SetActive(false);
+
         StartCoroutine(FadeIn());
     }
 
-    // Call this from your button — pass in the scene name as a string
     public void FadeToScene(string sceneName)
     {
         StartCoroutine(FadeOutAndLoad(sceneName));
@@ -24,8 +29,7 @@ public class SceneFader : MonoBehaviour
     private IEnumerator FadeIn()
     {
         float timer = 0f;
-        fadeImage.color = new Color(0, 0, 0, 1); // Start fully black
-
+        fadeImage.color = new Color(0, 0, 0, 1);
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
@@ -33,15 +37,13 @@ public class SceneFader : MonoBehaviour
             fadeImage.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
-
-        fadeImage.color = new Color(0, 0, 0, 0); // Fully transparent
+        fadeImage.color = new Color(0, 0, 0, 0);
     }
 
     private IEnumerator FadeOutAndLoad(string sceneName)
     {
         float timer = 0f;
-        fadeImage.color = new Color(0, 0, 0, 0); // Start transparent
-
+        fadeImage.color = new Color(0, 0, 0, 0);
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
@@ -49,8 +51,11 @@ public class SceneFader : MonoBehaviour
             fadeImage.color = new Color(0, 0, 0, alpha);
             yield return null;
         }
+        fadeImage.color = new Color(0, 0, 0, 1);
 
-        fadeImage.color = new Color(0, 0, 0, 1); // Fully black
-        SceneManager.LoadScene(sceneName);        // Load the next scene
+        if (loadingText != null)
+            loadingText.gameObject.SetActive(true);
+
+        SceneManager.LoadScene(sceneName);
     }
 }
